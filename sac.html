@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AcessiTransporte — SAC</title>
+  <link rel="stylesheet" href="public/css/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <img src="public/assets/logo.png" alt="logo" class="logo">
+    <h1>AcessiTransporte</h1>
+    <nav class="main-nav" aria-label="Menu principal">
+      <a href="index.html">Home</a>
+      <a href="motorista.html">Motorista</a>
+      <a href="passageiro.html">Passageiro</a>
+      <a href="corrida.html">Corrida</a>
+      <a href="sac.html" class="active">SAC</a>
+      <a href="contatos.html">Contatos</a>
+      <a href="sobre.html">Sobre Nós</a>
+    </nav>
+  </header>
+
+  <main class="main-container" style="max-width:900px;margin:24px auto;">
+    <section class="panel card" aria-labelledby="sac-title">
+      <h2 id="sac-title">Central de Atendimento (SAC)</h2>
+
+      <p class="text-muted">
+        Use este canal para reclamações, sugestões, elogios ou pedidos de ajuda. Responderemos o mais rápido possível.
+      </p>
+
+      <form id="sac-form" novalidate>
+        <label for="sac-type">Tipo</label>
+        <select id="sac-type" aria-describedby="sac-type-desc">
+          <option value="reclamacao">Reclamação</option>
+          <option value="sugestao">Sugestão</option>
+          <option value="elogio">Elogio</option>
+          <option value="suporte">Suporte técnico</option>
+        </select>
+        <div id="sac-type-desc" class="small text-muted">Escolha o tipo que melhor descreve sua solicitação.</div>
+
+        <label for="sac-subject">Assunto <span aria-hidden="true">*</span></label>
+        <input id="sac-subject" name="subject" maxlength="100" required placeholder="Resumo curto do seu pedido" />
+
+        <label for="sac-email">E-mail (opcional)</label>
+        <input id="sac-email" type="email" placeholder="seu@email.com" />
+
+        <label for="sac-msg">Mensagem <span aria-hidden="true">*</span></label>
+        <textarea id="sac-msg" name="message" rows="6" minlength="10" maxlength="2000" required
+          placeholder="Descreva com detalhes o ocorrido, local, horário e telefone para contato (opcional)"></textarea>
+        <div class="row" style="align-items:center;justify-content:space-between">
+          <div class="small text-muted" id="char-count">0 / 2000</div>
+          <div class="small text-muted">Campos com <strong>*</strong> são obrigatórios</div>
+        </div>
+
+        <div class="row" style="margin-top:12px">
+          <button id="send-sac" class="primary" type="button" aria-live="polite">Enviar solicitação</button>
+          <button id="save-draft" class="ghost" type="button">Salvar rascunho</button>
+          <button id="clear-form" class="ghost" type="button">Limpar</button>
+        </div>
+
+        <div id="sac-feedback" role="status" aria-live="polite" style="margin-top:12px"></div>
+      </form>
+    </section>
+
+    <aside style="width:100%;margin-top:16px">
+      <section class="panel card" aria-labelledby="sac-history-title">
+        <h3 id="sac-history-title">Histórico de solicitações</h3>
+        <div id="sac-history" class="card small">Carregando histórico...</div>
+        <div class="row" style="margin-top:10px">
+          <button id="download-history" class="ghost" type="button">Baixar histórico (JSON)</button>
+          <button id="clear-history" class="ghost" type="button">Limpar histórico</button>
+        </div>
+      </section>
+    </aside>
+  </main>
+
+  <footer style="max-width:900px;margin:24px auto;"><small>Rafaela — TCC</small></footer>
+
+  <script type="module" src="src/pages/sac-page.js"></script>
+</body>
+</html>

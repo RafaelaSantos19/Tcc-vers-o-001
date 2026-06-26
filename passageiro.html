@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>AcessiTransporte — Passageiro</title>
+<link rel="stylesheet" href="public/css/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>AcessiTransporte</h1>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="motorista.html">Motorista</a>
+      <a href="passageiro.html" class="active">Passageiro</a>
+      <a href="corrida.html">Corrida</a>
+      <a href="sac.html">SAC</a>
+      <a href="contatos.html">Contatos</a>
+      <a href="sobre.html">Sobre Nós</a>
+    </nav>
+  </header>
+
+  <main class="page passageiro">
+    <section class="panel card">
+      <h2>Perfil do Passageiro</h2>
+      <form id="passenger-form">
+        <label>Nome <input id="passenger-name" /></label>
+        <label>Telefone <input id="passenger-phone" /></label>
+        <label>Observações <textarea id="passenger-notes"></textarea></label>
+        <div class="row"><button id="save-passenger">Salvar</button></div>
+      </form>
+      <div id="passenger-saved" class="card" aria-live="polite"></div>
+    </section>
+    <section class="panel card">
+      <h2>Passageiros — Mobilidade com Dignidade</h2>
+
+      <p>
+        No <strong>AcessiTransporte</strong>, cada passageiro é o centro da nossa missão.
+        Desenvolvemos este sistema pensando em quem precisa de mais do que apenas uma corrida —
+        pensando em quem precisa de <strong>autonomia, acolhimento e respeito</strong>.
+      </p>
+
+      <p>
+        Aqui, você pode criar e personalizar o seu perfil, informando preferências e
+        <strong>necessidades de acessibilidade</strong>, como uso de cadeira de rodas,
+        auxílio de embarque ou equipamentos de apoio.
+        Isso permite que nossos motoristas estejam sempre preparados para oferecer
+        um atendimento adequado e seguro.
+      </p>
+
+      <h3>💡 Vantagens para o Passageiro</h3>
+      <ul>
+        <li>Interface simples, acessível e com leitura por voz integrada.</li>
+        <li>Mapas interativos para escolher origem e destino com facilidade.</li>
+        <li>Histórico de corridas salvas, permitindo acompanhar todas as suas viagens.</li>
+        <li>Opção de contato rápido com o SAC para suporte ou sugestões.</li>
+      </ul>
+
+      <p>
+        Acreditamos que <strong>mobilidade é um direito</strong> — e não um privilégio.
+        Nosso compromisso é garantir que cada passageiro possa se deslocar com
+        <strong>segurança, conforto e independência</strong>.
+      </p>
+
+      <p>
+        Mais do que um aplicativo, o AcessiTransporte é uma ponte entre pessoas,
+        promovendo inclusão e igualdade nas ruas e na vida.
+      </p>
+
+      <div class="text-muted small" style="margin-top:12px;">
+        “Viajar com conforto é bom. Viajar com respeito é essencial.” — <strong>AcessiTransporte</strong>
+      </div>
+    </section>
+
+  </main>
+
+  <footer><small>Rafaela — TCC</small></footer>
+  <script type="module" src="src/pages/passageiro-page.js"></script>
+</body>
+</html>

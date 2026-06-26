@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>AcessiTransporte — Corrida</title>
+<link rel="stylesheet" href="public/css/styles.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+</head>
+<body>
+<header class="topbar">
+  <img src="public/assets/logo.png" alt="logo" class="logo">
+  <h1>AcessiTransporte</h1>
+  <nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="motorista.html">Motorista</a>
+    <a href="passageiro.html">Passageiro</a>
+    <a href="corrida.html" class="active">Corrida</a>
+    <a href="sac.html">SAC</a>
+    <a href="contatos.html">Contatos</a>
+    <a href="sobre.html">Sobre Nós</a>
+  </nav>
+</header>
+
+<main class="page corrida">
+  <section class="panel card">
+    <h2>Solicitar Corrida</h2>
+    <label>Origem <input id="origin" placeholder="Clique no mapa ou entre coordenadas"></label>
+    <label>Destino <input id="dest" placeholder="Clique no mapa ou entre coordenadas"></label>
+    <label><input type="checkbox" id="need_wheelchair"> Cadeira de rodas</label>
+    <label><input type="checkbox" id="need_step"> Ajuda ao subir</label>
+    <label>Outras <textarea id="need_other"></textarea></label>
+    <div class="row">
+      <button id="calcPrice">Calcular preço</button>
+      <button id="requestRide">Solicitar (API)</button>
+      <button id="saveLocal">Salvar local</button>
+    </div>
+    <div>Preço estimado: R$ <span id="price">-</span></div>
+  </section>
+
+  <section class="panel card">
+    <h3>Mapa</h3>
+    <div id="map" class="map"></div>
+    <p class="map-hint">Clique no mapa: 1º clique = origem, 2º clique = destino.</p>
+  </section>
+</main>
+
+<footer><small>Rafaela — TCC</small></footer>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script type="module" src="src/pages/corrida-page.js"></script>
+</body>
+</html>
